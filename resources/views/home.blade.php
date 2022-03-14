@@ -20,5 +20,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <div class="div"></div>
+=======
+>>>>>>> 3c6977465cb0aafdf801a32ab46d9396d3dee5c4
 @endsection
