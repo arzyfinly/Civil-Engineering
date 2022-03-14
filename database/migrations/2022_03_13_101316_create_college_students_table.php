@@ -25,8 +25,6 @@ class CreateCollegeStudentsTable extends Migration
             $table->string('tmpt_lahir');
             $table->string('no_hp');
             $table->string('gender');
-            $table->string('photo')->nullable();
-            $table->string('kelas')->nullable();
             $table->timestamps();
         });
     }
