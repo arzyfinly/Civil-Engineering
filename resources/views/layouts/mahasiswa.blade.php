@@ -86,7 +86,11 @@
                     </li>
                     <div class="dropdown nav-item" style="width: 110px;">
                         <a class="nav-link smoth-scroll" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<<<<<<< HEAD
                             {{ Auth::user()->username }}
+=======
+                            {{ Auth::user()->name }}
+>>>>>>> 6d078803d92354ec2dd087b6acf9d337d5bfe6e4
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -134,7 +138,15 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @yield('content')
+=======
+@guest
+
+@else
+@yield('content')
+@endguest
+>>>>>>> 6d078803d92354ec2dd087b6acf9d337d5bfe6e4
 
     
     <!-- Main jQuery -->
