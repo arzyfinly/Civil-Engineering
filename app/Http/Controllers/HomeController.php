@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use Auth;
-=======
->>>>>>> 076bf8cae2c9edb498a16eb68947049348053cb3
-
 class HomeController extends Controller
 {
     /**
@@ -27,10 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
         return view('mahasiswa.index');
-=======
-        return view('home');
->>>>>>> 076bf8cae2c9edb498a16eb68947049348053cb3
     }
 }
