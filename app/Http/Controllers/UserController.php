@@ -25,11 +25,11 @@ class UserController extends Controller
         if (auth()->user()->hasRole('admin')) {
             $users = User::orderBy('id','DESC')->get();
             $roles = Role::all();
-            return view('users.index',compact('users', 'roles', 'departements'));
+            return view('admin.index',compact('users', 'roles', 'departements'));
         } else {
             $users = User::where('departement_id', auth()->user()->departement_id)->orderBy('id','DESC')->get();
             $roles = Role::all();
-            return view('users.index',compact('users', 'roles', 'departements'));
+            return view('user.index',compact('users', 'roles', 'departements'));
         }
     }
     
@@ -44,7 +44,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
+            'username' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'roles' => 'required'
@@ -69,8 +69,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        $roles = Role::pluck('name','name')->all();
-        $userRole = $user->roles->pluck('name','name')->all();
+        $roles = Role::pluck('username','username')->all();
+        $userRole = $user->roles->pluck('username','username')->all();
     
         return view('users.edit',compact('user','roles','userRole'));
     }
@@ -78,7 +78,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
+            'username' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
             'password' => 'same:confirm-password',
             'roles' => 'required'
