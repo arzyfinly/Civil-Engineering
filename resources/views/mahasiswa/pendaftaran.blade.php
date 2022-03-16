@@ -1,4 +1,4 @@
-@extends('../layout.pendaftaran-layout')
+@extends('../layouts.pendaftaran-layout')
 @section('title', 'Home')
 @include('sweetalert::alert')
 
@@ -11,59 +11,59 @@
 						<div style="text-align: center;">
 							<h4>Pendaftaran Praktikum</h4>
 						</div>
-						<form method="post" action="{{ route('daftar.create') }}">
+						<form method="post" action="#">
 							@csrf
 							<div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" class="form-control" name="first_name" disabled value="<?= $mahasiswa->first_name ?>" placeholder="Nama Lengkap">
+                                    <input type="text" class="form-control" name="first_name" disabled value="{{ $row->first_name }}" placeholder="Username">
 									<span class="form-label">Nama Depan</span>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" class="form-control" name="last_name" disabled value="<?= $mahasiswa->last_name ?>" placeholder="Nama Lengkap">
+                                    <input type="text" class="form-control" name="last_name" disabled value="{{ $row->last_name }}">
 									<span class="form-label">Nama Belakang</span>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" class="form-control" name="surename" disabled value="<?= $mahasiswa->surename ?>" placeholder="Nama Lengkap">
+                                    <input type="text" class="form-control" name="surename" disabled value="{{ $row->surename }}">
 									<span class="form-label">Nama Panggilan</span>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<input type="text" class="form-control" name="nama" disabled value="<?= $mahasiswa->first_name ?>  <?= $mahasiswa->last_name ?>" placeholder="Nama Lengkap">
+									<input type="text" class="form-control" name="nama" disabled value="{{ $row->first_name }} {{ $row->last_name }}">
 									<span class="form-label">Nama Lengkap</span>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" class="form-control" name="npm" placeholder="08XXXX" disabled value="<?= $mahasiswa->nim ?>">
+                                    <input type="text" class="form-control" name="npm" disabled value="{{ $row->nim }}">
 									<span class="form-label">NPM</span>
 								</div>
 							</div>
                             <div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" class="form-control" name="alamat" placeholder="Jln. XXX XXXX" value="<?= $mahasiswa->alamat ?>" disabled>
+                                    <input type="text" class="form-control" name="alamat" value="{{ $row->alamat }}" disabled>
 									<span class="form-label">Alamat</span>
 								</div>
 							</div>
                             <div class="col-md-3">
 								<div class="form-group">
-                                    <input type="date" name="tgl_lahir" class="form-control" value="<?= $mahasiswa->tgl_lahir ?>" disabled>
+                                    <input type="date" name="tgl_lahir" class="form-control" value="{{ $row->tgl_lahir }}" disabled>
 									<span class="form-label">Tanggal Lahir</span>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" name="tmpt_lahir" class="form-control" placeholder="Sumenep, XX-XX-XXXX" value="<?= $mahasiswa->tmpt_lahir ?>" disabled>
+                                    <input type="text" name="tmpt_lahir" class="form-control" value="{{ $row->tmpt_lahir }}" disabled>
 									<span class="form-label">Tempat Lahir</span>
 								</div>
 							</div>
                             <div class="col-md-3">
 								<div class="form-group">
-                                    <input type="text" name="no_hp" class="form-control" placeholder="08XXXXXXXXXX" value="<?= $mahasiswa->no_hp ?>" disabled>
+                                    <input type="text" name="no_hp" class="form-control" value="{{ $row->no_hp }}" disabled>
 									<span class="form-label">Nomor Handphone</span>
 								</div>
 							</div>

@@ -29,7 +29,7 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
 
-
+@include('sweetalert::alert')
 <nav class="navbar navbar-expand-lg fixed-top trans-navigation">
         <div class="container">
             <a class="navbar-brand" href="{{ route('/') }}">
@@ -63,10 +63,10 @@
                             Praktikum
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {{-- <a class="dropdown-item" href="{{ route('pendaftaran') }}">Pendaftaran Praktikum</a>
+                            <a class="dropdown-item" href="{{ route('pendaftaran') }}">Pendaftaran Praktikum</a>
                             <a class="dropdown-item" href="{{ route('daftar-hadir') }}">Daftar Hadir</a>
                             <a class="dropdown-item" href="{{ route('pelaksanaan') }}">Pelaksanaan</a>
-                            <a class="dropdown-item" href="{{ route('ujian') }}">Pelaksanaan Ujian Praktikum</a> --}}
+                            <a class="dropdown-item" href="{{ route('ujian') }}">Pelaksanaan Ujian Praktikum</a>
                         </div>
                     </div>
                     <li class="nav-item">
@@ -86,7 +86,7 @@
                     </li>
                     <div class="dropdown nav-item" style="width: 110px;">
                         <a class="nav-link smoth-scroll" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->username }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -105,8 +105,8 @@
         </div>
     </nav>
     <!--MAIN HEADER AREA END -->
-
 <!--MAIN BANNER AREA START -->
+
 <div class="banner-area banner-3">
     <div class="overlay dark-overlay"></div>
     <div class="d-table">
@@ -115,6 +115,7 @@
                 <div class="row">
                     <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                         <div class="banner-content content-padding">
+                            
                             @guest
                             <h1 class="banner-title">Register To Become a Civil Engineer</h1>
                             <p>Create an account and become a civil engineer</p>
@@ -134,12 +135,7 @@
         </div>
     </div>
 </div>
-@guest
-
-@else
 @yield('content')
-@endguest
-
     
     <!-- Main jQuery -->
     <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>
