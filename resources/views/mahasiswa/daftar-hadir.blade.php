@@ -1,4 +1,4 @@
-@extends('../layout.daftar-hadir-layout')
+@extends('../layouts.daftar-hadir-layout')
 
 @section('content')
 <div id="booking" class="section">
@@ -35,7 +35,6 @@
                         <div class="col-md-3">
 								<div class="form-btn">
                                     <a type="submit" href="{{ route('/') }}" class="btn btn-danger">Back</a>
-									<input type="submit" class="btn btn-primary" value="Daftar">
 								</div>
 							</div>
 					</div>

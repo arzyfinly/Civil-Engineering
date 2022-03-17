@@ -89,6 +89,7 @@
                             {{ Auth::user()->username }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a href="{{ route('data-pribadi') }}" class="dropdown-item">Profile</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
@@ -115,7 +116,6 @@
                 <div class="row">
                     <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                         <div class="banner-content content-padding">
-                            
                             @guest
                             <h1 class="banner-title">Register To Become a Civil Engineer</h1>
                             <p>Create an account and become a civil engineer</p>

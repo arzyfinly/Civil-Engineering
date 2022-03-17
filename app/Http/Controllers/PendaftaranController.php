@@ -18,7 +18,7 @@ class PendaftaranController extends Controller
 
         $collage = CollegeStudent::where(["user_id"=>$id_user])->get()->all();
         foreach($collage as $row){
-            if(!$row){
+            if($row){
                 return view("mahasiswa.pendaftaran", ["row"=>$row]);
             }else{
                 Session::flash('message', "Special message goes here");
