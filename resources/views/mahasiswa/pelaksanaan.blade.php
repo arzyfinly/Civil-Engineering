@@ -11,7 +11,7 @@
 						<div style="text-align: center;">
 							<h4>Pelaksanaan Praktikum</h4>
 						</div>
-                        <div class="card" style="width: 50rem;">
+                        <div class="card col-md-6">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
                                     <table class="table table-borderless">
@@ -55,7 +55,56 @@
                                     </table>                                   
                                 </li>
                             </ul>
-                          </div>
+                        </div>
+                        <div class="card col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <h4><strong>Catatan</strong></h4>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <textarea name="catatan" rows="2" cols="56" disabled placeholder="Catatan"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </div>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <h4><strong>History</strong></h4>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </div>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="form-btn">
+                                <a type="submit" href="{{ route('/') }}" class="btn btn-danger">Back</a>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>

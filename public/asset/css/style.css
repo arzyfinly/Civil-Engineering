@@ -126,3 +126,8 @@
 	border-radius: 4px;
 	display: block;
 }
+
+textarea{
+	resize: none;
+}
+
