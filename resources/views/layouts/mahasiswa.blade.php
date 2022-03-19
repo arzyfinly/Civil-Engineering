@@ -78,12 +78,6 @@
                     <li class="nav-item">
                         <a class="nav-link smoth-scroll" href="blog.html">Inventaris</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="contact.html">Keuangan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="contact.html">Keuangan</a>
-                    </li>
                     <div class="dropdown nav-item" style="width: 110px;">
                         <a class="nav-link smoth-scroll" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ Auth::user()->username }}

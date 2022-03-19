@@ -22,15 +22,15 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Nip</td>
+                                                <td>NPM</td>
                                                 <td>:</td>
                                                 <td>2100000212</td>
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td>Nama Dosen</td>
+                                                <td>Nama Asprak</td>
                                                 <td>:</td>
-                                                <td>Dosen Nama</td>
+                                                <td>Asprak Nama</td>
                                                 <td></td>
                                             </tr>
                                             <tr>

@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="booking-form">
 						<div style="text-align: center;">
-							<h4>Pelaksanaan Praktikum</h4>
+							<h4>Pelaksanaan Ujian Praktikum</h4>
 						</div>
                         <div class="card col-md-6">
                             <ul class="list-group list-group-flush">
@@ -22,7 +22,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Nip</td>
+                                                <td>NIDN</td>
                                                 <td>:</td>
                                                 <td>2100000212</td>
                                                 <td></td>
